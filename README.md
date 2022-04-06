@@ -10,10 +10,10 @@ Mention observer exposes *set* function. Set accepts object in parameter.
 	editArea: node,
 	value: {rawText: string, mentions: [ { id: string, name: string}, ... ] },
 	options: [ { id: sring, name: string } ,... ],
-	callBack: function
+	callback: function
 }
 
-*callBack* is called with object
+*callback* is called with object
 
 ### callBack object structure
 {
