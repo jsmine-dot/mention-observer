@@ -8,8 +8,8 @@ Mention observer exposes *set* function. Set accepts object in parameter.
 ### set object strucure
 {
 	editArea: node,
-	value: {rawText: string, mentions: [ { id: string, name: string}, ... ] },
-	options: [ { id: sring, name: string } ,... ],
+	value: {rawText: string, mentions: [ { id: string, value: string}, ... ] },
+	options: [ { id: sring, value: string } ,... ],
 	callback: function
 }
 
@@ -18,7 +18,7 @@ Mention observer exposes *set* function. Set accepts object in parameter.
 ### callBack object structure
 {
 	rawText: string, 
-	mentions: [ { id: string, name: string }, ... ],
+	mentions: [ { id: string, value: string }, ... ],
 	searchKey: string
 }
 
