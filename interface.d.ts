@@ -1,6 +1,6 @@
 interface MentionObject {
     id: string,
-    name: string
+    value: string
 }
 interface Input {
     rawText: string,

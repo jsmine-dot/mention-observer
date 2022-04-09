@@ -64,7 +64,7 @@ export default (() => {
             const mentions = [];
             nodeList.forEach(node => {
                 if (node.mentionId) {
-                    mentions.push({ id: node.mentionId, display_value: node.data, startIndex: rawText.length, endIndex: rawText.length + node.mentionId.toString().length });
+                    mentions.push({ id: node.mentionId, value: node.data, startIndex: rawText.length, endIndex: rawText.length + node.mentionId.toString().length });
                     rawText += node.mentionId;
                 } else {
                     rawText += node.data;
@@ -80,9 +80,8 @@ export default (() => {
         }, 1);
     }
     function triggerCallback() {
-        const { callback } = state;
         attachSearchParam();
-        callback(outputObject)
+        state.callback && state.callback(outputObject)
     }
     function attachSearchParam() {
         const focusedNode = window.getSelection().focusNode as MentionNode;
@@ -165,7 +164,7 @@ export default (() => {
         options_node.style.cursor = "pointer";
         for (let i = 0; i < options.length; i++) {
             const option_node = document.createElement("li");
-            option_node.innerText = options[i].name;
+            option_node.innerText = options[i].value;
             option_node.mentionId = options[i].id;
             options_node.append(option_node);
         }
@@ -276,7 +275,7 @@ export default (() => {
             const indexDictValue = indexDict[key];
             let node: MentionNode;
             if (indexDictValue.mention) {
-                node = createTextNode(trigger + indexDictValue.mention.name, true);
+                node = createTextNode(trigger + indexDictValue.mention.value, true);
                 node.mentionId = indexDictValue.mention.id;
                 setMentionAreaObserver(node);
                 node = createSpan(node);
