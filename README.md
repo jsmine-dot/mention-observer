@@ -22,6 +22,10 @@ Mention observer exposes *set* function. Set accepts object in parameter.
 	searchKey: string
 }
 
+## package implemented:
+[react-mention-div git](https://github.com/jsmine-dot/react-mention-div)
+     
+[react-mention-div npm](https://www.npmjs.com/package/@jsmine/react-mention-div)
 
 
 
