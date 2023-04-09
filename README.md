@@ -24,6 +24,7 @@ Mention observer exposes *set* function. Set accepts object in parameter.
 
 ## package implemented:
 [react-mention-div git](https://github.com/jsmine-dot/react-mention-div)	[react-mention-div npm](https://www.npmjs.com/package/@jsmine/react-mention-div)
+
 [editable div mention observer vanilla JS](https://codesandbox.io/s/editable-div-mention-observer-3hbue9)
 
 
